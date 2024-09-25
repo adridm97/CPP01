@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: adrian <adrian@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/24 11:56:32 by adrian            #+#    #+#              #
-#    Updated: 2024/09/24 11:57:02 by adrian           ###   ########.fr        #
+#    Created: 2024/09/24 11:57:49 by adrian            #+#    #+#              #
+#    Updated: 2024/09/24 11:57:50 by adrian           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= brainz
+NAME	= ex03
 CPP		= c++
 CFLAGS	= -Wall -Wextra -Werror -std=c++98 -fsanitize=address
-SOURCES	= main.cpp Zombie.cpp zombieHorde.cpp
+SOURCES	= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJS	= ${SOURCES:.cpp=.o}
 
 all: $(NAME)

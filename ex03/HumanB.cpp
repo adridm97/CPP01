@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 11:56:38 by adrian            #+#    #+#             */
-/*   Updated: 2024/09/24 11:56:59 by adrian           ###   ########.fr       */
+/*   Created: 2024/09/25 10:28:16 by adrian            #+#    #+#             */
+/*   Updated: 2024/09/25 10:33:26 by adrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+#include "HumanB.hpp"
 
-#include <iostream>
-#include <iomanip>
+HumanB::HumanB(std::string name) : name(name), weapon(NULL) {}
+HumanB::~HumanB(){}
 
-class Zombie
+void HumanB::setWeapon(Weapon& weapon)
 {
-private:
-    std::string name;
-public:
-    Zombie();
-    Zombie(std::string name);
-    ~Zombie();
-    void announce( void );
-    void setName(std::string name);
-};
+    this->weapon = &weapon;
+}
 
-Zombie* zombieHorde(int N, std::string name);
-
-#endif
+void HumanB::attack() const
+{
+    if (weapon)
+        std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+    else
+        std::cout << name << " has no weapon" << std::endl;
+}
