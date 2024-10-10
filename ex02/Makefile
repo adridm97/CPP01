@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: adrian <adrian@student.42.fr>              +#+  +:+       +#+         #
+#    By: aduenas- <aduenas-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/24 11:56:48 by adrian            #+#    #+#              #
-#    Updated: 2024/09/24 11:56:50 by adrian           ###   ########.fr        #
+#    Updated: 2024/10/10 21:35:05 by aduenas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= ex02
+NAME	= a.out
 CPP		= c++
 CFLAGS	= -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 SOURCES	= main.cpp 

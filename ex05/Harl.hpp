@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aduenas- <aduenas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 11:09:41 by adrian            #+#    #+#             */
-/*   Updated: 2024/09/26 11:12:27 by adrian           ###   ########.fr       */
+/*   Updated: 2024/10/10 22:31:29 by aduenas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 
 class Harl
 {
-private:
-    void debug(void);
-    void info(void);
-    void warning(void);
-    void error(void);
-public:
-    void complain(std::string level);
+    private:
+        void debug(void);
+        void info(void);
+        void warning(void);
+        void error(void);
+    public:
+        void complain(std::string level);
 };
 
 #endif

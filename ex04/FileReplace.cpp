@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FileReplace.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aduenas- <aduenas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 11:52:15 by adrian            #+#    #+#             */
-/*   Updated: 2024/09/25 11:56:36 by adrian           ###   ########.fr       */
+/*   Updated: 2024/10/10 21:44:10 by aduenas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@ void FileReplace::replaceInFile(const std::string& filename, const std::string& 
 {
     if (s1.empty() || s2.empty())
     {
-        std::cerr << "Error: Las cadenas s1 y s2 no pueden estar vacías." << std::endl;
+        std::cout << "Error: Las cadenas s1 y s2 no pueden estar vacías." << std::endl;
         return;
     }
-    std::ifstream infile(filename);
+    std::ifstream infile(filename.c_str());
     if (!infile)
     {
-        std::cerr << "Error: No se pudo abrir el archivo " << filename << std::endl;
+        std::cout << "Error: No se pudo abrir el archivo " << filename << std::endl;
         return;
     }
-    std::ofstream outfile(filename + ".replace");
+    std::ofstream outfile((filename + ".replace").c_str());
     if (!outfile)
     {
-        std::cerr << "Error: No se pudo crear el archivo de salida." << std::endl;
+        std::cout << "Error: No se pudo crear el archivo de salida." << std::endl;
         infile.close();
         return;
     }

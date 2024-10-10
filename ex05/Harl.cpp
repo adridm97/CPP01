@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aduenas- <aduenas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 11:10:40 by adrian            #+#    #+#             */
-/*   Updated: 2024/09/26 11:33:08 by adrian           ###   ########.fr       */
+/*   Updated: 2024/10/10 22:31:14 by aduenas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,10 @@ void Harl::complain(std::string level)
         &Harl::debug, &Harl::info, &Harl::warning, &Harl::error
     };
     std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-    for (int i = 0; i < 4; i++) {
-        if (levels[i] == level) {
+    for (int i = 0; i < 4; i++)
+    {
+        if (levels[i] == level)
+        {
             (this->*functions[i])();
             return;
         }

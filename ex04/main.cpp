@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aduenas- <aduenas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 12:00:39 by adrian            #+#    #+#             */
-/*   Updated: 2024/09/25 12:02:40 by adrian           ###   ########.fr       */
+/*   Updated: 2024/10/10 21:38:23 by aduenas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int main(int argc, char **argv)
 {
-    if (argc != 4) {
+    if (argc != 4)
+    {
         std::cerr << "Invalid arguments" << std::endl;
         return 1;
     }
